@@ -58,118 +58,158 @@
     color: beige;
 }
 
+.hero {
+    display: flex;
+    background-color: rgb(134, 96, 24);
+    margin: 8px;
+    padding: 10px;
+    opacity: 90;
+    text-align: center;
 
+}
+
+.hero h2 {
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
 
 .containerhero {
-    display: inline-block;
-    justify-content: center;
-    background-image: url(../img/hero.jpg);
+    background-color: rgb(128, 102, 72);
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.Principal {
    
-    padding-left: 10px;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    opacity: 80%;
-    background-size: 1300px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-    padding-left: 100px;
     margin: 10px;
-
-}
-h1 {
-    color: rgb(255, 255, 255);
-    font-family: 'Times New Roman', Times, serif;
 }
 
-p {
-    color: beige;
+.Principal p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 247, 238);
 }
 
-.containerhero img {
-    size: 1900px;
+
+.Principal img {
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+    opacity: 80%;
+    border-radius: 5px;
+}
+
+
+.grid-galeria {
+    margin-top: 20px;
+width: 100%;
+height: 100%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: 300px;
+grid-template-rows: repeat(3, 1fr);
+gap: 15px;
+
+}
+
+.grid-galeria div img {
     width: 100%;
     height: 100%;
-}
-
-
-.imagen {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 3,1fr;
-    grid-template-rows: 3,1fr;
-}
-
-
-
-    
-.galeria img{
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns:repeat(3,1fr);
-    column-gap: .5rem;
-    row-gap: .5rem;
     object-fit: cover;
-    padding: 10px;
-    grid-gap: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 10px;
+    margin: 35px;
+    box-shadow: 2 4px 8px rgb(107, 75, 26);
 }
-    
-
-.galeria__item:nth-child(6) {
-grid-column-start: span 2;
-}
-
 
 .card {
     display: inline-block;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
-    padding: 20px;
-    background-color: rgb(217, 178, 130);
+    justify-content: space-around;
+    padding: 30px;
+    background-color: rgb(243, 212, 174);
     width: 250px;
-    margin: 25px;
-    border-radius: 20px;
+    margin: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgb(65, 48, 23);
     padding: 5px;
 }
 
+.card div :hover {
+    color: rgb(28, 28, 34);
+    transition: 1s;
+}
+
+
+
+
+
+
+
 .card img{
-margin: 5px;
-padding: 8px;
-        width: 200px;
-padding-left: 18px;
-        border-radius: 20px;
+    justify-content: center;
+         margin: 5px;
+         padding: 8px;
+         width: 200px;
+         padding-left: 18px;
+         border-radius: 35px;
     }
 
     .card h2{
+        text-align: center;
+        padding: 10px;
         font-size: 16px;
         font-weight: bold;
-        
         font-family: Arial, Helvetica, sans-serif;
-        color: rgb(255, 255, 255);
+        color: rgb(170, 130, 93);
     }
+
+.card p {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(65, 58, 58);
+}
+
+@media screen and (max-width:500px){
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 
     .nosotros {
         background-color: rgb(125, 94, 56);
-        
     }
+
+
 
 .Quienessomos {
   background-image: url(../img/FONDO.HERO.jpg);
+  border-radius: 15px;
   opacity: 90%;
   margin: 30px;
   padding: 20px;
 }
 
-
-
-
-
-
-
     .Quienessomos p {
-        background-color: rgb(161, 112, 51);
+        background-color: rgb(150, 119, 81);
+        border-radius: 15px;
         margin: 20px;
         padding: 20px;
      color: rgb(255, 255, 255);
@@ -179,36 +219,28 @@ padding-left: 18px;
     }
 
     .Quienessomos h1 {
-        background-color: rgb(149, 96, 17);
-        color: rgb(34, 22, 8);
+        background-color: rgb(107, 75, 26); ;
+        color: rgb(255, 245, 234);
         text-align: center;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
     }
 .alejandra img {
     width: 100%;
-    opacity: 80%;
-    margin: 30px;
+    opacity: 90%;
     padding: 22px;
-    
 }
 
 .alejandra p {
-    font-size: 25px;
+    padding: 10px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: beige;
     text-align: center;
 }
 
 
-
-.footer {
-    background-image: url(../img/footer.jpg);
-    background-size: 1200px;
-    background-repeat: no-repeat;
-    max-width: 100%;
-    height: 100%;
-
-}
 .contacto {
     background-color: rgb(88, 61, 28);
     box-sizing: border-box;
@@ -222,25 +254,42 @@ padding-left: 18px;
     font-size: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:768px) {
-    .carrusel {
-        height: 200px;
+@media screen and (max-width:610px){
+    .grid-galeria{
+        grid-template-columns: repeat (2,1fr);
+        grid-auto-rows: 200px;
     }
-  
-    
+    .grid-galeria div img{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .img-9 {
+        grid-column: span 2;
+    }
 }
 
-    
+@media screen and (max-width:700px){
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.pie {
+    display: flex;
+    flex-direction:column;
+    background-color: rgb(206, 134, 41);
+    padding: 10px;
+    box-sizing: border-box;
+    background-size: 1200px;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 100%;
+}
+
+.divpie {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 15px;
+}
