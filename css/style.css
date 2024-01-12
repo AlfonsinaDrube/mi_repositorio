@@ -60,79 +60,77 @@
 
 .hero {
     display: flex;
-    background-color: rgb(134, 96, 24);
-    margin: 8px;
-    padding: 10px;
+    background-color: rgb(226, 200, 151);
+    margin: 10px;
+    padding: 28px;
     opacity: 90;
     text-align: center;
+    border-radius: 25px;
 
 }
 
 .hero h2 {
+    display: flex;
     justify-content: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.Principal {
+    display: flex;
+    margin: 5px;
+   
 }
 
 .containerhero {
-    background-color: rgb(128, 102, 72);
-    padding: 10px;
-    margin: 10px;
+    background-color: rgb(199, 166, 127);
+    padding: 15px;
+    margin: 15px;
+    border-radius: 26px;
 }
 
-
-.Principal {
-   
+.containerhero img {
     display: flex;
-    justify-content: center;
     width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
-}
-
-
-
-.Principal p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    color: rgb(255, 247, 238);
-}
-
-
-.Principal img {
+    border-radius: 22px;
+    object-fit: cover;
     padding: 10px;
-    width: 600px;
-    height: 300px;
-    opacity: 80%;
-    border-radius: 5px;
 }
+
+.containerhero p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
 
 .grid-galeria {
-    margin-top: 20px;
-width: 100%;
-height: 100%;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-auto-rows: 300px;
-grid-template-rows: repeat(3, 1fr);
-gap: 15px;
+    margin-top: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 290px;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
 
 }
 
 .grid-galeria div img {
+    display: grid;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    padding: 5px;
-    border: 10px;
-    margin: 35px;
-    box-shadow: 2 4px 8px rgb(107, 75, 26);
+    padding: 2px;
+    border: 5px;
+    margin: 15px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    
 }
 
 .card {
@@ -153,12 +151,6 @@ gap: 15px;
     color: rgb(28, 28, 34);
     transition: 1s;
 }
-
-
-
-
-
-
 
 .card img{
     justify-content: center;
@@ -244,38 +236,68 @@ gap: 15px;
 
 
 .contacto {
-    background-color: rgb(88, 61, 28);
+    display: flex;
+    width: 100%;
+    background-color: rgb(204, 168, 124);
     box-sizing: border-box;
     margin: 30px;
     padding: 30px;
+    position: relative;
 }
 .contacto p {
+    display: flex;
+    text-decoration: wavy;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 40%;
+    transform: translate(-50%,-50%);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: aliceblue;
-    font-size: 20px;
+    font-size: 25px;
+    margin: 25px;
+    padding: 25px;
 }
 
-
-
-.pie {
+.contacto img {
+    background-size: 40px;
     display: flex;
-    flex-direction:column;
-    background-color: rgb(206, 134, 41);
-    padding: 10px;
-    box-sizing: border-box;
-    background-size: 1500px;
-    background-repeat: no-repeat;
-    max-width: 100%;
+    justify-content: center;
+    width: 100%;
     height: 100%;
+    opacity: 20%;
+    box-sizing: border-box;
+    border-radius: 30px;
 }
 
-.divpie {
+.mapa p {
     display: flex;
-    flex-direction: column;
-    margin: 20px;
-    padding: 15px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+.mapa img {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    margin: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4 px rgb(125, 94, 56);
+    animation: zoom-in 2s ease-in-out infinite alternate;
+
+}
+
+
+
+
+
+
 @media screen and (max-width:600px){
     header {
         flex-direction: column;
@@ -307,4 +329,33 @@ gap: 15px;
     .img-9 {
         grid-column: span 2;
     }
+}
+
+footer {
+    width: 100%;
+    padding: 50px 0px;
+    background-color: rgb(150, 99, 58);
+
+}
+
+.containerfooter {
+    display: flex;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.boxfooter {
+    display: flex;
+    display: inline-block;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.logofooter {
+    display: flex;
+    justify-content: center;
 }
